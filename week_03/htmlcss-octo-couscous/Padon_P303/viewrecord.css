@@ -1,0 +1,73 @@
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url('img/logback.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container{
+  position: absolute;
+    left: 300px;
+    top: 100px;
+    height: 500px;
+    width: 700px;
+    background-color: rgba(92, 91, 91, 0.5);
+    border-radius: 25px;
+}
+
+
+.title{
+    padding: 30px;
+    
+}
+
+.title h1{
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    color: white;
+    
+  }
+  th{
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(92, 91, 91, 0.5);
+  }
+  td {
+    border: 1px solid #ffffff;
+    text-align: center;
+    padding: 15px;
+    margin: 5px;
+  }
+  
+  tr {
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+ 
+
+  input[type="button"] {
+    background-color: #777777;
+    margin-left: 30px;
+    color: rgb(0, 0, 0);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 25px;
+    
+  }
+  
+  input[type="button"]:hover {
+     background-color: #2a2a2b;
+     color: white;
+  }
+
+.butt{
+    display: flex;
+    padding: 30px;
+    margin-left: 150px;
+}
+  

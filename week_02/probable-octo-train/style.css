@@ -1,0 +1,38 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    color: white;
+}
+
+
+.w3-container h1{
+    position: relative;
+    left: 40%;
+    height: 70px;
+    width: 320px;
+    border: 1px solid white;
+    border-radius: 25px;
+    padding-left: 25px;
+  
+}
+.w3-content{
+    justify-content: center;
+    text-align: justify;
+}
+
+.imgFile{
+    width: 100%;
+    min-height: 200px;
+    filter: saturate(300%);
+    border-radius: 50px;
+}
+
+.w3-twothird h2{
+    text-align: center;
+    justify-content: center;
+}
+
+.chosen_place{
+    text-indent: 50px;
+}
