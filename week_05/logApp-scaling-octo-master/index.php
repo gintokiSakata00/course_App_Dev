@@ -8,14 +8,31 @@
 		$lname = mysqli_real_escape_string($conn,$_POST['lname']);
 		$fname = mysqli_real_escape_string($conn,$_POST['fname']);
 		$address = mysqli_real_escape_string($conn,$_POST['address']);
+    $gtype = mysqli_real_escape_string($conn,$_POST['gtype']);
+    $role = mysqli_real_escape_string($conn,$_POST['role']);
+    $pin = mysqli_real_escape_string($conn,$_POST['pin']);
+    $fullname = $fname;
+    $fullname .=" ";
+    $fullname .= $lname;
+   
+    if(is_numeric($pin) and strlen($pin)==4){
+      $insert_to_guest = "INSERT INTO guest(Lname, Fname,Address,job,role,Tlog,fullname,pin4digit) VALUES('$lname', '$fname', '$address', '$gtype','$role',now(), '$fullname','$pin')";
+    }else{
+      echo "pin must be numeric and only 4 digits";
+    }
+    
+  
+		
 
-		$query = "INSERT INTO person(lastname, firstname,address,logdt) VALUES('$lname', '$fname', '$address', now())";
-
-		if(mysqli_query($conn, $query)){
+		if(mysqli_query($conn, $insert_to_guest)){
       header('Location: '.ROOT_URL.'');
 		} else {
 			echo 'ERROR: '. mysqli_error($conn);
 		}
+    
+   
+    // header("location: index.php");
+    // exit();
 	}
 ?>
 
@@ -35,6 +52,24 @@
     <div class="form-group">
       <label for="uname">First name:</label>
       <input type="text" class="form-control" id="fname" placeholder="Enter first name" name="fname" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Job type:</label>
+      <input type="text" class="form-control" id="gtype" placeholder="Enter job type" name="gtype" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">Role type:</label>
+      <input type="text" class="form-control" id="role" placeholder="Enter role type" name="role" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div>
+    <div class="form-group">
+      <label for="uname">4 digit Pin:</label>
+      <input type="password" class="form-control" id="pin" placeholder="Enter 4 digit pin" name="pin" required>
       <div class="valid-feedback">Valid.</div>
       <div class="invalid-feedback">Please fill out this field.</div>
     </div>
