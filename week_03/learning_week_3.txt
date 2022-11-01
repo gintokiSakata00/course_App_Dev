@@ -1,0 +1,38 @@
+Basic html and CSS - The main component of the front development which focuses on structure and styling of the web. Together html and css can make a static websites.
+
+
+Learnings html():
+
+div
+table
+tr
+th
+td
+
+p
+h
+br
+
+form
+input
+label
+a
+
+
+Learning css():
+display flex
+flex box wrap
+background img
+overflow hidden
+backdrop filter blur
+
+border
+borderradius
+font size
+box shadow
+
+color 
+background
+
+padding
+margin

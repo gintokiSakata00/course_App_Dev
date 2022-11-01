@@ -1,10 +1,10 @@
 <?php
-
-function pokemon_defense($arrayname, $limit_number){
-    foreach($arrayname as $specie){
-        $defense = $specie[7];
-        if($defense >= $limit_number){
-            echo($specie[1]." with Defense of ".$defense."<br>");
+//function determine what pokemon with defense limit number
+function pokemon_defense($arrayname, $limit_number){ 
+    foreach($arrayname as $specie){ //foreach loop named $specie
+        $defense = $specie[7]; //initilize variable defense value taken the foreachloop variable $specie with index of 7 as the defense
+        if($defense >= $limit_number){ //condition to filter if defense is greater or equal to limit 
+            echo($specie[1]." with Defense of ".$defense."<br>"); //if triggered print the pokemon name with certain defense
         }
         
     }
@@ -25,5 +25,5 @@ function pokemon_defense($arrayname, $limit_number){
       
   );
   echo "Pokemon specie that is greater or equal to 40 <br>";
-  Pokemon_defense($ginLearningswithGil,40);
+  Pokemon_defense($ginLearningswithGil,40);  //function with no return type
 ?>

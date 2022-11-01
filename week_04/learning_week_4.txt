@@ -1,0 +1,22 @@
+PHP PROGRAMMING LANGUAGE - PHP is a server side scripting language that is embedded in HTML. It is used to manage dynamic content, databases, session tracking, even build entire e-commerce sites. It is integrated with a number of popular databases, including MySQL, PostgreSQL, Oracle, Sybase, Informix, and Microsoft SQL Server.
+
+Learning php():
+array
+foreach loop
+$variablename
+
+multidimensional array - $variablename = array( array() , array())
+array notation = $arrayname[][]
+
+include 
+require
+
+// Include a file, if it can't be found: continue.
+<?php
+include 'mainfile.php';
+?>
+  
+// Alternatively: Require a file to be imported or quit if it can't be found
+<?php
+ require 'requiredfile.php';
+?>

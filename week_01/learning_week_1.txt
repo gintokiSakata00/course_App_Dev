@@ -1,0 +1,21 @@
+Terminal is the best way to communicate and also interact with computers plus it consumes smaller amount of ram
+giving the user the best customization in usage.
+
+Commands
+cls
+dir
+cd
+tree /f
+* wildcard
+
+
+copy
+move
+xcopy
+rename
+echo
+nul
+del /s
+
+
+

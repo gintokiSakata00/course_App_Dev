@@ -1,20 +1,20 @@
 <?php
-  function hp_sum($ginLearningswithGil){
-    $add_hp =0;
+  function hp_sum($ginLearningswithGil){ //function
+    $add_hp =0; //initialize
     foreach ($ginLearningswithGil as $hp){
            $add_hp = $add_hp + $hp[5];
     }
-    return $add_hp;
+    return $add_hp; //return value
   }
 
-  function ave_attack($ginLearningswithGil){
-    $avg_attack =0;
-    $countTotalPokemon = count($ginLearningswithGil);
-    foreach ($ginLearningswithGil as $avg){
-           $avg_attack = $avg_attack + $avg[6];
+  function ave_attack($ginLearningswithGil){ //function average attack
+    $avg_attack =0; //initialize 0 as variable avg_attack
+    $countTotalPokemon = count($ginLearningswithGil); //count the array indexes it will results to 10
+    foreach ($ginLearningswithGil as $avg){ //iterate using foreach loop with variable $avg
+           $avg_attack = $avg_attack + $avg[6]; //geting values of attack index 6 of the array
     }
-    $average = $avg_attack/$countTotalPokemon;
-    return $average;
+    $average = $avg_attack/$countTotalPokemon; //getting the average
+    return $average; //return value
   }
 
   $ginLearningswithGil = array //2.Create a multidimensional array named YourTeamName.
@@ -32,8 +32,9 @@
       
   );
 
-  echo "Total pokemon hp: ".hp_sum($ginLearningswithGil)."<br>";
-  echo "Average pokemon attack ".ave_attack($ginLearningswithGil);
+  echo "Total pokemon hp: ".hp_sum($ginLearningswithGil)."<br>"; //printing total hp
+  echo "Average pokemon attack ".ave_attack($ginLearningswithGil); //printing avg attack
+
 
 
 ?>

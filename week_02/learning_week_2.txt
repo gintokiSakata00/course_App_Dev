@@ -1,0 +1,31 @@
+Git - a version control  that allows developer to manipulate their code that has better manipulation. 
+These manipulation includes code changes history, branches, commits for changes, pull for update and lastly, push for pushing updated changes.
+
+Commands:
+git init
+git add
+git commit
+git push
+git 
+
+git status
+git log
+git branch 
+git checkout
+git branch -d  #delete branch
+git checkout -b #create branch and switch at the same time
+
+
+git config user.name
+git config user.email
+
+
+git config --global user.name
+git config --global user.email
+
+git remote -v
+git remote add origin
+
+git reset HEAD
+git reset --hard HEAD~1
+git commit --amend --no-edit

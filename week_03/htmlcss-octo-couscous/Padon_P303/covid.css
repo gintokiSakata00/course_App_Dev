@@ -1,29 +1,44 @@
 body{
     padding: 0;
     margin: 0;
+    /* import local image set as background */
     background-image: url('img/image_covid.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
 }
 
+
+/* put to container and do flex wrap this makes responsive cards */
+.main{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+
+/* table container  */
 .container{
-    position: relative;
-    left: 100px;
-    top: 100px;
+  margin-top: 50px; 
     height: 500px;
     width: 600px;
     background-color: rgba(43, 42, 42, 0.5);
     border-radius: 25px;
+   
 }
 
+
+/* information container */
 .info{
-    position: absolute;
-    left: 850px;
-    top: 100px;
+   
+    margin-top: 50px; 
+    margin-left: 50px;
     height: 450px;
     width: 400px;
     background-color: rgba(43, 42, 42, 0.5);
     border-radius: 25px;
+    
 }
 
 .title{
@@ -40,19 +55,22 @@ table {
     width: 100%;
    
   }
+
+  /* table head putting border */
   th{
     border: 1px solid #070707;
     text-align: left;
     padding: 8px;
     background-color: rgb(128, 128, 245);
   }
-  td {
-    
+  /*  table data border and padding */
+  td {  
     border: 1px solid #000000;
     text-align: left;
     padding: 8px;
   }
-  
+
+  /* table row background */
   tr {
     background-color: #dddddd;
   }

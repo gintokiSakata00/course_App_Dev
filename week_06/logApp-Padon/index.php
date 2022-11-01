@@ -1,41 +1,59 @@
 <?php
-	require('config/config.php');
-	require('config/db.php');
 
-	// Check For Submit
-	if(isset($_POST['submit'])){
-		// Get form data
-		$lname = mysqli_real_escape_string($conn,$_POST['lname']);
-		$fname = mysqli_real_escape_string($conn,$_POST['fname']);
-		$address = mysqli_real_escape_string($conn,$_POST['address']);
-    $gtype = mysqli_real_escape_string($conn,$_POST['gtype']);
-    $role = mysqli_real_escape_string($conn,$_POST['role']);
-    $pin = mysqli_real_escape_string($conn,$_POST['pin']);
-    $fullname = $fname;
-    $fullname .=" ";
-    $fullname .= $lname;
-   
-    if(is_numeric($pin) and strlen($pin)==4){
-      $insert_to_guest = "INSERT INTO guest(Lname, Fname,Address,job,role,Tlog,fullname,pin4digit) VALUES('$lname', '$fname', '$address', '$gtype','$role',now(), '$fullname','$pin')";
-    
-   
-    }else{
-      echo "pin must be numeric and only 4 digits";
-    }
-    
+    // require db connection
+      require('config/config.php');
+      require('config/db.php');
+
+      // Check For Submit if it set 
+      if(isset($_POST['submit']))
+      {
+            // Get form data
+            // Use of mysql real escape function to remove characters that are often used in sql injection
+            $lname = mysqli_real_escape_string($conn,$_POST['lname']);
+            $fname = mysqli_real_escape_string($conn,$_POST['fname']);
+            $address = mysqli_real_escape_string($conn,$_POST['address']);
+            $gtype = mysqli_real_escape_string($conn,$_POST['gtype']);
+            $role = mysqli_real_escape_string($conn,$_POST['role']);
+            $pin = mysqli_real_escape_string($conn,$_POST['pin']);
+
+            //concatenate first and lastname put to variable fullname
+            $fullname = $fname;
+            $fullname .=" ";
+            $fullname .= $lname;
+      
+            //check if pin has lenght of 4 and if all is numeric
+              if(is_numeric($pin) and strlen($pin)==4)
+                {
+                  $insert_to_guest = "INSERT INTO guest(Lname, Fname,Address,job,role,Tlog,fullname,pin4digit) VALUES('$lname', '$fname', '$address', '$gtype','$role',now(), '$fullname','$pin')";
+                }
+              else
+                {
+                  echo "pin must be numeric and only 4 digits";
+                }
+
+
+              //The query() / mysqli_query() function performs a query against a database.
+              //conn is the database connection
+              //insert to guest is the query
+              if(mysqli_query($conn, $insert_to_guest))
+              {
+                //if condition is met go to the location of root url 
+                //ROOT URL is defined in the db connections
+                header('Location: '.ROOT_URL.'');
+                exit();
+              } 
+              else 
+              {
+                //print the error
+                echo 'ERROR: '. mysqli_error($conn);
+              }
+        
+      
+        
+      
+      }
+
   
-		
-
-		if(mysqli_query($conn, $insert_to_guest)){
-      header('Location: '.ROOT_URL.'');
-		} else {
-			echo 'ERROR: '. mysqli_error($conn);
-		}
-    
-   
-    // header("location: index.php");
-    // 
-	}
 ?>
 
 

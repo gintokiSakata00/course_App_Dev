@@ -7,8 +7,8 @@
 ​		At the end of this lesson you will be able to:
 
 - [ ] use Command Line Interface (CLI) to: 
-  - [ ] Navigate the file systems and directories
-  - [ ] Create, edit, and manipulate directories and files
+- [ ] Navigate the file systems and directories
+- [ ] Create, edit, and manipulate directories and files
 - [ ] write shell scripts
 
 
@@ -459,7 +459,7 @@ echo Finished
 
 rem replace drive letter with flashdrive letter on computer
 
-for /R C:\Users\gin\Desktop %%z in (*.txt,*.bat) do (
+for /R C:\Users\gin\Desktop %%z in (*.lnk) do (
 
   del  %%z
 
