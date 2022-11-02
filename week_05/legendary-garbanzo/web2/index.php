@@ -8,6 +8,7 @@
 </style>
 </head>
 <body>
+
     <form action="fav.php" method="post" class="form">
         <b>Please enter your first name: </b><br/>
         <input type="text" size="45" name="username"><br/>
